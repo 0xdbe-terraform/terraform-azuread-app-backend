@@ -7,6 +7,8 @@ resource "random_uuid" "scope_uuid" {
 resource "azuread_application" "main" {
   display_name     = "backend-${var.application_short_name}-${var.application_environment}"
   owners           = [data.azuread_client_config.current.object_id]
+  identifier_uris  = ["api://${lower(var.application_short_name)}-${lower(var.application_environment)}"]
+  sign_in_audience = "AzureADMyOrg"
 
   api {
 

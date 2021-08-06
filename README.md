@@ -12,7 +12,7 @@ So, if you're authenticating using a Service Principal then it must have ``Appli
 
 ```hcl
 module "azuread_app_backend" {
-  source                    = "git::https://github.com/0xdbe-terraform/terraform-azuread-app-backend.git?ref=v1.0.0"
+  source                    = "git::https://github.com/0xdbe-terraform/terraform-azuread-app-backend.git?ref=v1.0.1"
   application_short_name    = "HW"
   application_environment   = "dev"
   application_api_scope     = [
